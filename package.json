@@ -1,0 +1,43 @@
+{
+  "name": "fsd_2_lvl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxKuch/FSD-second-task.git"
+  },
+  "keywords": [
+    "toxin",
+    "fsd-2-lvl"
+  ],
+  "author": "KuchMax",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxKuch/FSD-second-task/issues"
+  },
+  "homepage": "https://github.com/MaxKuch/FSD-second-task#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "terser-webpack-plugin": "^2.3.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.0",
+    "jquery": "^3.4.1",
+    "normalize-css": "^2.3.1"
+  }
+}
