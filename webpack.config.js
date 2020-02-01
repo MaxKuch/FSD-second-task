@@ -54,7 +54,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html',
+            template: './index.pug',
+            filename: 'index.html',
             minify: {
                 collapseWhitespace: isProd
             }
@@ -62,7 +63,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: filename('css')
-        })
+        }),
     ],
     module: {
         rules: [
@@ -81,6 +82,10 @@ module.exports = {
             {
                 test: /\.(ttf|woff|eot|svg)$/,
                 use: ['file-loader']
+            },
+            {
+                test: /\.pug$/,
+                use: [`pug-loader?pretty=${isDev}`]
             }
         ]
     }
