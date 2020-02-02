@@ -1,6 +1,8 @@
 @import "vars"
+*, *:before, *:after
+    box-sizing: border-box
 .section-title
-    font-family: Quicksand-Bold
+    font-family: Quicksand
     font-style: normal
     font-weight: bold
     font-size: 24px
@@ -8,7 +10,7 @@
     color: $Dark-Shade-100
 
 .widget-title
-    font-family: Quicksand-Bold
+    font-family: Quicksand
     font-style: normal
     font-weight: bold
     font-size: 19px
@@ -16,15 +18,17 @@
     color: $Dark-Shade-100
 
 .label
-    font-famile: Montserrat-Bold
+    font-family: Montserrat
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 100%
     text-transform: uppercase
     color: $Dark-Shade-100
+    &_pdng
+        padding-bottom: 5.44px
 .parag
-    font-family: Montserrat-Regular
+    font-family: Montserrat
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -32,7 +36,7 @@
     color: $Dark-Shade-75
 
 input
-    font-family: Montserrat-Regular
+    font-family: Montserrat
     font-style: normal
     font-weight: normal
     font-size: 14px
@@ -41,12 +45,12 @@ input
     border-radius: 4px
     width: 100%
     max-width: 320px
-    padding: 13px 15px 13px 15px
+    padding: 12px 15px 13px 15px
     color: $Dark-Shade-75
     transition: all .2s ease
 
-input:hover, input:focus
-    border: 1px solid $Dark-Shade-50
+input:hover, input:hover ~ button, input:focus, input:focus ~ button
+    border-color: $Dark-Shade-50
     outline: none
 input::-webkit-input-placeholder  
     color: $Dark-Shade-25
@@ -56,3 +60,16 @@ input::-ms-input-placeholder
     color: $Dark-Shade-25
 input::placeholder
     color: $Dark-Shade-25
+
+input:disabled 
+    cursor: pointer
+    background-color: #fff
+
+
+button 
+    background: none
+    border: none
+    padding: 0
+ul
+    padding: 0
+    margin: 0

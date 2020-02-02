@@ -4,4 +4,37 @@
   <title>= "Ui-Kit"</title>
 <link href="main.css" rel="stylesheet"></head>
 <body>
+  <div class="dropdown dropdown_w320">
+    <div class="label label_pdng">Гости</div>
+    <div class="dropdown__input-container">
+      <input class="dropdown__input" type="text" name="dropdown" placeholder="Сколько гостей" disabled="disabled">
+      <button class="dropdown__expd-more"><i class="material-icons">expand_more</i></button>
+    </div>
+    <div class="dropdown__menu label">
+      <ul class="dropdown__list">
+        <li>Взрослые
+          <div class="dropdown__counter">
+            <div>-</div><span class="dropdown__count">0</span>
+            <div>+</div>
+          </div>
+        </li>
+        <li>Дети
+          <div class="dropdown__counter">
+            <div>-</div><span class="dropdown__count">0</span>
+            <div>+</div>
+          </div>
+        </li>
+        <li>Младенцы
+          <div class="dropdown__counter">
+            <div>-</div><span class="dropdown__count">0</span>
+            <div>+</div>
+          </div>
+        </li>
+      </ul>
+      <div class="dropdown__btns">
+        <button class="dropdown__btns-clear label">Очистить</button>
+        <button class="dropdown__btns-accept label">Применить</button>
+      </div>
+    </div>
+  </div>
 <script type="text/javascript" src="main.js"></script></body>

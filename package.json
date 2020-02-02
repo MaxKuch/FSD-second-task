@@ -42,6 +42,7 @@
   "dependencies": {
     "cross-env": "^7.0.0",
     "jquery": "^3.4.1",
+    "material-design-icons": "^3.0.1",
     "normalize-css": "^2.3.1"
   }
 }

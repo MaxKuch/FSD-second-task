@@ -1,0 +1,66 @@
+@import ../other/vars
+.dropdown
+    width: 100%
+    position: relative
+    &__input-container
+        display: flex
+        justify-content: space-between
+    &__input
+        width: 100%
+        padding-right: 44px
+        z-index: 5
+        border-radius: 5px 0 0 5px
+        border-right: 0
+    &__expd-more
+        width: 44px
+        height: 44px
+        color: $Dark-Shade-75
+        border: 1px solid $Dark-Shade-25
+        border-radius: 0 5px 5px 0
+        border-left: 0
+        transition: all .2s ease
+    &__menu
+        position: absolute
+        width: 100%
+        background-color: #fff 
+        top: 59px
+        border: 1px solid $Dark-Shade-50
+        border-radius: 0 0 5px 5px
+        z-index: 10
+        padding: 7px 7px 8px 15px
+    &__list li, &__counter
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__counter > div
+        font-weight: normal
+    &__list li
+        margin-bottom: 7px
+    &__counter div
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $Dark-Shade-50
+        font-size: 18px
+        cursor: pointer
+        width: 30px
+        height: 30px
+        line-height: 0
+        border: 1px solid $Dark-Shade-25
+        border-radius: 50%
+    &__counter div:first-child
+        margin-right: 15px
+    &__counter div:last-child
+        margin-left: 15px
+    &__btns
+        display: flex
+        justify-content: space-between
+        margin-top: 20px
+        &-clear
+            color: $Dark-Shade-50
+
+.dropdown_w266
+    max-width: 266px
+
+.dropdown_w320
+    max-width: 320px

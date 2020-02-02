@@ -1,3 +1,10 @@
 extends templates/ui-kit_templ
-include elements/text-field
+include elements/dropdown
 block content
+    -
+        var args = {
+            label: "Гости",
+            name: "dropdown",
+            placeholder: "Сколько гостей"
+        }
+    +dropdownW320(args, "Взрослые", "Дети" , "Младенцы")
