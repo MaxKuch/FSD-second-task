@@ -423,3 +423,80 @@ table {
   font-style: normal;
   src: url(1158e1cc70f11f5a959637e1312c0fbd.ttf) format("truetype"), url(f1f2a53fdadfb5c1e566f2aba31c617c.woff) format("woff"), url(2d339a692583b56d73be1afaab450a5c.eot), url(77d2692f62f981cac7cf7e92756b93ef.svg) format("svg");
 }
+.section-title {
+  font-family: Quicksand-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 125%;
+  color: #1F2041;
+}
+
+.widget-title {
+  font-family: Quicksand-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 126%;
+  color: #1F2041;
+}
+
+.label {
+  font-famile: Montserrat-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+
+.parag {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 171%;
+  color: #575871;
+}
+
+input {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  border: 1px solid #C7C7CF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 320px;
+  padding: 13px 15px 13px 15px;
+  color: #575871;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input:hover, input:focus {
+  border: 1px solid #8F90A0;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #C7C7CF;
+}
+
+input:-ms-input-placeholder {
+  color: #C7C7CF;
+}
+
+input::-ms-input-placeholder {
+  color: #C7C7CF;
+}
+
+input::-moz-placeholder {
+  color: #C7C7CF;
+}
+
+input::placeholder {
+  color: #C7C7CF;
+}
