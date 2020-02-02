@@ -12,10 +12,10 @@ const cssLoaders = extra => {
     const loaders = [{
         loader: MiniCssExtractPlugin.loader,
         options: {
-            hmr: isProd,
+            hmr: true,
             reloadAll: true
         }
-    }, 'css-loader']
+    }, 'css-loader', 'postcss-loader']
     if (extra) {
         loaders.push(extra)
     }
@@ -44,7 +44,7 @@ module.exports = {
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
-            '@styles': path.resolve(__dirname, 'src/styles')
+            '@sass': path.resolve(__dirname, 'src/sass')
         }
     },
     optimization: optimization(),
@@ -52,10 +52,14 @@ module.exports = {
         filename: filename('js'),
         path: path.resolve(__dirname, 'dist')
     },
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000
+    },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.pug',
-            filename: 'index.html',
+            template: './pug/ui-kit.pug',
+            filename: 'ui-kit.html',
             minify: {
                 collapseWhitespace: isProd
             }
@@ -63,7 +67,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: filename('css')
-        }),
+        })
     ],
     module: {
         rules: [
