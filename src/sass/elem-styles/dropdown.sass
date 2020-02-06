@@ -1,29 +1,13 @@
 @import ../other/vars
 .dropdown
     width: 100%
-    position: relative
-    &__input-container
-        display: flex
-        justify-content: space-between
-    &__input
-        width: 100%
-        padding-right: 44px
-        z-index: 5
-        border-radius: 5px 0 0 5px
-        border-right: 0
-    &__expd-more
-        width: 44px
-        height: 44px
-        color: $Dark-Shade-75
-        border: 1px solid $Dark-Shade-25
-        border-radius: 0 5px 5px 0
-        border-left: 0
-        transition: all .2s ease
+    position: relative       
     &__menu
         position: absolute
+        display: none
         width: 100%
         background-color: #fff 
-        top: 59px
+        top: 60px
         border: 1px solid $Dark-Shade-50
         border-radius: 0 0 5px 5px
         z-index: 10

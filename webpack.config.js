@@ -44,7 +44,8 @@ module.exports = {
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
-            '@sass': path.resolve(__dirname, 'src/sass')
+            '@sass': path.resolve(__dirname, 'src/sass'),
+            '@js': path.resolve(__dirname, 'src/js'),
         }
     },
     optimization: optimization(),
