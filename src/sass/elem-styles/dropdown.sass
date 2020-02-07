@@ -16,31 +16,32 @@
         display: flex
         justify-content: space-between
         align-items: center
-    &__counter > div
-        font-weight: normal
+    &__count
+        text-align: center
+        width: 32px
     &__list li
         margin-bottom: 7px
-    &__counter div
+    &__inc, &__dec
         display: flex
         align-items: center
         justify-content: center
         color: $Dark-Shade-50
         font-size: 18px
+        font-weight: normal
         cursor: pointer
         width: 30px
         height: 30px
         line-height: 0
         border: 1px solid $Dark-Shade-25
         border-radius: 50%
-    &__counter div:first-child
-        margin-right: 15px
-    &__counter div:last-child
-        margin-left: 15px
+    &__dec
+        opacity: 0.38
     &__btns
         display: flex
         justify-content: space-between
         margin-top: 20px
         &-clear
+            visibility: hidden
             color: $Dark-Shade-50
 
 .dropdown_w266

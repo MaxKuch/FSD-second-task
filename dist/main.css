@@ -165,13 +165,14 @@ ul {
   -webkit-box-align: center;
           align-items: center;
 }
-.dropdown__counter > div {
-  font-weight: normal;
+.dropdown__count {
+  text-align: center;
+  width: 32px;
 }
 .dropdown__list li {
   margin-bottom: 7px;
 }
-.dropdown__counter div {
+.dropdown__inc, .dropdown__dec {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -180,6 +181,7 @@ ul {
           justify-content: center;
   color: #8F90A0;
   font-size: 18px;
+  font-weight: normal;
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -187,11 +189,8 @@ ul {
   border: 1px solid #C7C7CF;
   border-radius: 50%;
 }
-.dropdown__counter div:first-child {
-  margin-right: 15px;
-}
-.dropdown__counter div:last-child {
-  margin-left: 15px;
+.dropdown__dec {
+  opacity: 0.38;
 }
 .dropdown__btns {
   display: -webkit-box;
@@ -201,6 +200,7 @@ ul {
   margin-top: 20px;
 }
 .dropdown__btns-clear {
+  visibility: hidden;
   color: #8F90A0;
 }
 

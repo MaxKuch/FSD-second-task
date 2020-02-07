@@ -5,11 +5,11 @@ mixin dropdownW320(args, ...items)
         .dropdown__menu.label
             ul.dropdown__list
                 each item in items
-                    li= item 
+                    li= item.itemName 
                         .dropdown__counter
-                            div= "-"
+                            button(data-item = item.itemData).dropdown__dec= "-"
                             span.dropdown__count= 0
-                            div= "+"
+                            button(data-item = item.itemData).dropdown__inc= "+"
             .dropdown__btns
                 button.dropdown__btns-clear.label Очистить
                 button.dropdown__btns-accept.label Применить
@@ -21,8 +21,8 @@ mixin dropdownW266(args, ...items)
         .dropdown__menu.label
             ul.dropdown__list
                 each item in items
-                    li= item 
+                    li= item.itemName 
                         .dropdown__counter
-                            div= "-"
+                            div(data-item = item.itemData)= "-"
                             span.dropdown__count= 0
-                            div= "+"
+                            div(data-item = item.itemData)= "+"
