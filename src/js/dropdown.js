@@ -54,4 +54,55 @@ $(".dropdown__btns-clear").on("click", function(){
     itemsAmount.resetToZero()
     $(".dropdown__dec").css("opacity", "0.38")
     $(this).css("visibility", "hidden")
+    $(this).parents(".dropdown").find(".dropdown-input__inp").attr("placeholder", "Сколько гостей")
 })
+
+$(".dropdown__btns-accept").on("click", function(){
+    if(itemsAmount.totalSum != 0){
+        if($(this).parents(".dropdown").attr("data-name") == "dropdown-guests"){
+            $(this).parents(".dropdown").find(".dropdown-input__inp").attr("placeholder", showItemsAmount())
+        }
+            
+    }
+})
+
+function showItemsAmount(){
+    if(itemsAmount.totalSum() != 0){
+        let outputStr = ""
+        if(itemsAmount.adult != 0){
+            if(itemsAmount.adult == 1)
+            outputStr = "1 гость"
+            else{
+                if(itemsAmount.adult == 2 || itemsAmount.adult == 3 || itemsAmount.adult == 4)
+                    outputStr = `${itemsAmount.adult} гостя`
+                else
+                    outputStr = `${itemsAmount.adult} гостей`
+            }
+            if(itemsAmount.adult != itemsAmount.totalSum())
+                outputStr += ", "
+        }
+        if(itemsAmount.kids != 0){
+            if(itemsAmount.kids == 1)
+            outputStr += "1 ребенок"
+            else{
+                if(itemsAmount.kids == 2 || itemsAmount.kids == 3 || itemsAmount.kids == 4)
+                outputStr += `${itemsAmount.kids} ребенка`
+                else
+                    outputStr += `${itemsAmount.kids} детей`
+            }
+            if((itemsAmount.adult + itemsAmount.kids) != itemsAmount.totalSum())
+                outputStr += ", "
+        }
+        if(itemsAmount.babyes != 0){
+            if(itemsAmount.babyes == 1)
+                outputStr += "1 младенец"
+            else{
+                if(itemsAmount.babyes == 2 || itemsAmount.babyes == 3 || itemsAmount.babyes == 4)
+                outputStr += `${itemsAmount.babyes} младенца`
+                else
+                    outputStr += `${itemsAmount.babyes} младенцев`
+            }
+        }
+        return outputStr
+    }
+}

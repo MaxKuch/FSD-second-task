@@ -3,10 +3,17 @@
     justify-content: space-between
     &__inp
         width: 100%
-        padding-right: 44px
         z-index: 5
         border-radius: 5px 0 0 0
         border-right: 0
+        &::-webkit-input-placeholder  
+            color: $Dark-Shade-75
+        &:-ms-input-placeholder
+            color: $Dark-Shade-75
+        &::-ms-input-placeholder
+            color: $Dark-Shade-75
+        &::placeholder
+            color: $Dark-Shade-75
     &__expnd-more
         display: flex
         align-items: center

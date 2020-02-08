@@ -1,6 +1,6 @@
 include dropdown-input
 mixin dropdownW320(args, ...items)
-    .dropdown.dropdown_w320
+    .dropdown.dropdown_w320(data-name = args.name)
         +dropdown-input(args)
         .dropdown__menu.label
             ul.dropdown__list
