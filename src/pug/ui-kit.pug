@@ -1,10 +1,5 @@
 extends templates/ui-kit_templ
-include elements/dropdown
+include elements/dropdown/dropdown
 block content
-    -
-        var args = {
-            label: "Гости",
-            name: "dropdown-guests",
-            placeholder: "Сколько гостей"
-        }
-    +dropdownW320(args, {itemName:"Взрослые", itemData: "adult"}, {itemName:"Дети", itemData: "kids"} , {itemName:"Младенцы", itemData: "babyes"})
+    include elements/dropdown/dropdown_comfort
+    include elements/dropdown/dropdown_guests

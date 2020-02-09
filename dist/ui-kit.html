@@ -4,30 +4,59 @@
   <title>= "Ui-Kit"</title>
 <link href="vendors~main.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
 <body>
-  <div class="dropdown dropdown_w320" data-name="dropdown-guests">
-    <div class="label label_pdng">Гости</div>
+  <div class="dropdown dropdown_comfort" data-name="dropdown-comfort">
+    <div class="label label_pdng">Удобства номера</div>
     <div class="dropdown-input">
-      <input class="dropdown-input__inp input" type="text" name="dropdown-guests" placeholder="Сколько гостей" disabled="disabled">
+      <input class="dropdown-input__inp input" type="text" name="dropdown-comfort" placeholder="Удобства номера" data-placeholder="Удобства номера" disabled="disabled">
       <button class="dropdown-input__expnd-more"><i class="material-icons">expand_more</i></button>
     </div>
     <div class="dropdown__menu label">
       <ul class="dropdown__list">
-        <li>Взрослые
+        <li data-item="bedrooms">Спальни
           <div class="dropdown__counter">
-            <button class="dropdown__dec" data-item="adult">-</button><span class="dropdown__count">0</span>
-            <button class="dropdown__inc" data-item="adult">+</button>
+            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
+            <button class="dropdown__inc">+</button>
           </div>
         </li>
-        <li>Дети
+        <li data-item="beds">Кровати
           <div class="dropdown__counter">
-            <button class="dropdown__dec" data-item="kids">-</button><span class="dropdown__count">0</span>
-            <button class="dropdown__inc" data-item="kids">+</button>
+            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
+            <button class="dropdown__inc">+</button>
           </div>
         </li>
-        <li>Младенцы
+        <li data-item="baths">Ванные комнаты
           <div class="dropdown__counter">
-            <button class="dropdown__dec" data-item="babyes">-</button><span class="dropdown__count">0</span>
-            <button class="dropdown__inc" data-item="babyes">+</button>
+            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
+            <button class="dropdown__inc">+</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="dropdown dropdown_guests" data-name="dropdown-guests">
+    <div class="label label_pdng">Гости</div>
+    <div class="dropdown-input">
+      <input class="dropdown-input__inp input" type="text" name="dropdown-guests" placeholder="Сколько гостей" data-placeholder="Сколько гостей" disabled="disabled">
+      <button class="dropdown-input__expnd-more"><i class="material-icons">expand_more</i></button>
+    </div>
+    <div class="dropdown__menu label">
+      <ul class="dropdown__list">
+        <li data-item="adult">Взрослые
+          <div class="dropdown__counter">
+            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
+            <button class="dropdown__inc">+</button>
+          </div>
+        </li>
+        <li data-item="kids">Дети
+          <div class="dropdown__counter">
+            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
+            <button class="dropdown__inc">+</button>
+          </div>
+        </li>
+        <li data-item="babyes">Младенцы
+          <div class="dropdown__counter">
+            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
+            <button class="dropdown__inc">+</button>
           </div>
         </li>
       </ul>

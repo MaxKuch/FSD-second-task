@@ -145,6 +145,7 @@ ul {
 .dropdown {
   width: 100%;
   position: relative;
+  max-width: 320px;
 }
 .dropdown__menu {
   position: absolute;
@@ -154,7 +155,7 @@ ul {
   top: 60px;
   border: 1px solid #8F90A0;
   border-radius: 0 0 5px 5px;
-  z-index: 10;
+  z-index: 100;
   padding: 7px 7px 8px 15px;
 }
 .dropdown__list li, .dropdown__counter {
@@ -205,14 +206,6 @@ ul {
 .dropdown__btns-clear {
   visibility: hidden;
   color: #8F90A0;
-}
-
-.dropdown_w266 {
-  max-width: 266px;
-}
-
-.dropdown_w320 {
-  max-width: 320px;
 }
 
 .dropdown-input {

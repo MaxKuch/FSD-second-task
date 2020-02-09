@@ -2,6 +2,7 @@
 .dropdown
     width: 100%
     position: relative       
+    max-width: 320px
     &__menu
         position: absolute
         display: none
@@ -10,7 +11,7 @@
         top: 60px
         border: 1px solid $Dark-Shade-50
         border-radius: 0 0 5px 5px
-        z-index: 10
+        z-index: 100
         padding: 7px 7px 8px 15px
     &__list li, &__counter
         display: flex
@@ -45,9 +46,3 @@
         &-clear
             visibility: hidden
             color: $Dark-Shade-50
-
-.dropdown_w266
-    max-width: 266px
-
-.dropdown_w320
-    max-width: 320px

@@ -1,0 +1,27 @@
+
+include ../dropdown-input
+mixin dropdown_comfort(args, ...items)
+    .dropdown.dropdown_comfort(data-name = args.name)
+        +dropdown-input(args)
+        .dropdown__menu.label
+            ul.dropdown__list
+                each item in items
+                    li(data-item = item.itemData)= item.itemName 
+                        .dropdown__counter
+                            button.dropdown__dec= "-"
+                            span.dropdown__count= 0
+                            button.dropdown__inc= "+"
+mixin dropdown_guests(args, ...items)
+    .dropdown.dropdown_guests(data-name = args.name)
+        +dropdown-input(args)
+        .dropdown__menu.label
+            ul.dropdown__list
+                each item in items
+                    li(data-item = item.itemData)= item.itemName 
+                        .dropdown__counter
+                            button.dropdown__dec= "-"
+                            span.dropdown__count= 0
+                            button.dropdown__inc= "+"
+            .dropdown__btns
+                button.dropdown__btns-clear.label Очистить
+                button.dropdown__btns-accept.label Применить
