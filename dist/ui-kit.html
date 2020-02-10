@@ -1,69 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru"></html>
-<head>
-  <title>= "Ui-Kit"</title>
-<link href="vendors~main.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
-<body>
-  <div class="dropdown dropdown_comfort" data-name="dropdown-comfort">
-    <div class="label label_pdng">Удобства номера</div>
-    <div class="dropdown-input">
-      <input class="dropdown-input__inp input" type="text" name="dropdown-comfort" placeholder="Удобства номера" data-placeholder="Удобства номера" disabled="disabled">
-      <button class="dropdown-input__expnd-more"><i class="material-icons">expand_more</i></button>
-    </div>
-    <div class="dropdown__menu label">
-      <ul class="dropdown__list">
-        <li data-item="bedrooms">Спальни
-          <div class="dropdown__counter">
-            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
-            <button class="dropdown__inc">+</button>
-          </div>
-        </li>
-        <li data-item="beds">Кровати
-          <div class="dropdown__counter">
-            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
-            <button class="dropdown__inc">+</button>
-          </div>
-        </li>
-        <li data-item="baths">Ванные комнаты
-          <div class="dropdown__counter">
-            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
-            <button class="dropdown__inc">+</button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="dropdown dropdown_guests" data-name="dropdown-guests">
-    <div class="label label_pdng">Гости</div>
-    <div class="dropdown-input">
-      <input class="dropdown-input__inp input" type="text" name="dropdown-guests" placeholder="Сколько гостей" data-placeholder="Сколько гостей" disabled="disabled">
-      <button class="dropdown-input__expnd-more"><i class="material-icons">expand_more</i></button>
-    </div>
-    <div class="dropdown__menu label">
-      <ul class="dropdown__list">
-        <li data-item="adult">Взрослые
-          <div class="dropdown__counter">
-            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
-            <button class="dropdown__inc">+</button>
-          </div>
-        </li>
-        <li data-item="kids">Дети
-          <div class="dropdown__counter">
-            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
-            <button class="dropdown__inc">+</button>
-          </div>
-        </li>
-        <li data-item="babyes">Младенцы
-          <div class="dropdown__counter">
-            <button class="dropdown__dec">-</button><span class="dropdown__count">0</span>
-            <button class="dropdown__inc">+</button>
-          </div>
-        </li>
-      </ul>
-      <div class="dropdown__btns">
-        <button class="dropdown__btns-clear label">Очистить</button>
-        <button class="dropdown__btns-accept label">Применить</button>
-      </div>
-    </div>
-  </div>
-<script type="text/javascript" src="vendors~main.js"></script><script type="text/javascript" src="main.js"></script></body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Document</title>
+  <link href="vendors~main.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <label class="label label_pdng" for="input_masked">Дата рождения</label>
+    <input class="input input_masked" id="input_masked" type="text" name="date" placeholder="ДД.ММ.ГГГГ" spellcheck="false">
+  <script type="text/javascript" src="vendors~main.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

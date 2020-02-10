@@ -59,6 +59,7 @@
 }
 
 .label {
+  display: block;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
