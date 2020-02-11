@@ -1,6 +1,6 @@
 mixin dropdown-input(args)
     .label.label_pdng #{args.label}
-    .dropdown-input
-        input(type='text' name=args.name placeholder=args.placeholder data-placeholder=args.placeholder disabled).dropdown-input__inp.input
-        button.dropdown-input__expnd-more
+    .input-with-btn
+        input(type='text' name=args.name placeholder = args.placeholder disabled).input.input-with-btn__inp.input-with-btn__inp_dark-shade-75
+        button.input-with-btn__btn.dark-shade-50
             i.material-icons expand_more

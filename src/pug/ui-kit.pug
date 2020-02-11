@@ -1,2 +1,13 @@
 extends templates/ui-kit_templ
+include elements/dropdown-input
+include elements/subscription-input
 block content
+    +subscription-input()
+    -
+        var args = {
+            name: "guests",
+            label: "Гости",
+            placeholder: "Сколько гостей"
+        }
+        
+    +dropdown-input(args)
