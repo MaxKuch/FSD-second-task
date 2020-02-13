@@ -1,5 +1,11 @@
 import * as $ from 'jquery'
 
+function truncate(string, maxLen){
+    if(string.length > maxLen){
+        string = string.slice(0, maxLen) + "…"
+    }
+    return string
+}
 function ItemsAmount() {
 
     this.totalSum = function() {
@@ -45,8 +51,8 @@ function showItemsAmount(target){
 
             $(target)
             .parents(".dropdown")
-            .find(".dropdown-input__inp")
-            .attr("placeholder", toStringGuests($(target).parents(".dropdown").find(".dropdown-input__inp")))
+            .find(".input")
+            .attr("placeholder", toStringGuests($(target).parents(".dropdown").find(".input")))
 
         }
 
@@ -54,8 +60,8 @@ function showItemsAmount(target){
 
             $(target)
             .parents(".dropdown")
-            .find(".dropdown-input__inp")
-            .attr("placeholder", toStringComfort($(target).parents(".dropdown").find(".dropdown-input__inp")))
+            .find(".input")
+            .attr("placeholder", toStringComfort($(target).parents(".dropdown").find(".input")))
 
         }             
     }
@@ -193,17 +199,16 @@ function toStringComfort(target){
     else
         outputStr = $(target).attr("data-placeholder")
 
-    return outputStr
+    return truncate(outputStr, 20) 
 }
 
-$(".dropdown-input__expnd-more").on("click", function() {
+$(".dropdown-input__btn").on("click", function() {
 
     let isOpened = $(this)
                    .parent()
                    .next()
                    .css("display") == "none" 
 
-    let borderColor = isOpened ? "#8F90A0" : "#C7C7CF"
 
     $(this)
     .parent()
@@ -212,9 +217,16 @@ $(".dropdown-input__expnd-more").on("click", function() {
 
     $(this)
     .prev()
-    .css("border-color", borderColor)
+    .toggleClass("input-with-btn__inp_dark-shade-50-border")
+    $(this)
+    .prev()
+    .toggleClass("input-with-btn__inp_dark-shade-25-border")
 
-    $(this).css("border-color", borderColor)
+    $(this)
+    .toggleClass("input-with-btn__inp_dark-shade-50-border")
+    $(this)
+    .prev()
+    .toggleClass("input-with-btn__inp_dark-shade-25-border")
 
 })
 
@@ -298,12 +310,12 @@ $(".dropdown__btns-clear").on("click", function(){
 
     let defaultPlaceholder = $(this)
                              .parents(".dropdown")
-                             .find(".dropdown-input__inp")
+                             .find(".input")
                              .attr("data-placeholder")
 
     $(this)
     .parents(".dropdown")
-    .find(".dropdown-input__inp")
+    .find(".input")
     .attr("placeholder", defaultPlaceholder)
 })
 

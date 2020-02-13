@@ -1,0 +1,46 @@
+.input-with-btn
+    max-width: 320px
+    display: flex
+    justify-content: space-between 
+    &:hover > *
+        border-color: $Dark-Shade-50
+        outline: none
+    &__inp
+        width: 100%
+        z-index: 5
+        border-radius: 5px 0 0 0
+        border: 1px solid $Dark-Shade-25
+        border-right: 0
+        background: #fff
+        &_dark-shade-50-border
+            border-color: $Dark-Shade-50 !important
+        &_dark-shade-25-border
+            border-color: $Dark-Shade-25 
+        &_dark-shade-75       
+            &::-webkit-input-placeholder  
+                color: $Dark-Shade-75
+            &:-ms-input-placeholder
+                color: $Dark-Shade-75
+            &::-ms-input-placeholder
+                color: $Dark-Shade-75
+            &::placeholder
+                color: $Dark-Shade-75
+    &__inp:focus + &__btn
+        border-color: $Dark-Shade-50
+    &__btn   
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 44px
+        height: 44px
+        border: 1px solid $Dark-Shade-25
+        border-radius: 0 5px 0 0
+        border-left: 0
+        transition: all .2s ease
+        &_dark-shade-50-border
+            border-color: $Dark-Shade-50 !important
+        &_dark-shade-25-border
+            border-color: $Dark-Shade-25
+        i
+            width: 44px
+

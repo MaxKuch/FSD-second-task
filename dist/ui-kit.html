@@ -6,14 +6,41 @@
     <title>Document</title>
   <link href="vendors~main.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
   <body>
-    <div class="input-with-btn">
-      <input class="input input-with-btn__inp" type="text" name="email" placeholder="Email">
-      <button class="input-with-btn__btn purple"><i class="material-icons">arrow_forward</i></button>
+    <div class="checkbox-buttons">
+      <h3 class="label checkbox-buttons__title">Checkbox buttons</h3>
+      <ul>
+        <li class="checkbox-buttons__items">
+          <input class="checkbox-buttons__inp" type="checkbox" name="smoking" id="smoking">
+          <label class="parag" for="smoking">Можно курить</label>
+        </li>
+        <li class="checkbox-buttons__items">
+          <input class="checkbox-buttons__inp" type="checkbox" name="pets" id="pets">
+          <label class="parag" for="pets">Можно с питомцами</label>
+        </li>
+        <li class="checkbox-buttons__items">
+          <input class="checkbox-buttons__inp" type="checkbox" name="guests" id="guests">
+          <label class="parag" for="guests">Можно пригласить гостей (до десяти человек)</label>
+        </li>
+      </ul>
     </div>
-    <div class="label label_pdng">Гости</div>
-    <div class="input-with-btn">
-      <input class="input input-with-btn__inp input-with-btn__inp_dark-shade-75" type="text" name="guests" placeholder="Сколько гостей" disabled="disabled">
-      <button class="input-with-btn__btn dark-shade-50"><i class="material-icons">expand_more</i></button>
+    <div class="checkbox-buttons">
+      <h3 class="label checkbox-buttons__title">Доступность</h3>
+      <ul>
+        <li class="checkbox-buttons__items">
+          <input class="checkbox-buttons__inp" type="checkbox" name="hall" id="hall">
+          <div>
+            <label class="parag" for="hall">Большой член</label>
+            <p class="checkbox-buttons__description">Ширина коридоров в номере не менее 91 см.</p>
+          </div>
+        </li>
+        <li class="checkbox-buttons__items">
+          <input class="checkbox-buttons__inp" type="checkbox" name="assistant" id="assistant">
+          <div>
+            <label class="parag" for="assistant">Большие яйца</label>
+            <p class="checkbox-buttons__description">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+          </div>
+        </li>
+      </ul>
     </div>
   <script type="text/javascript" src="vendors~main.js"></script><script type="text/javascript" src="main.js"></script></body>
 </html>

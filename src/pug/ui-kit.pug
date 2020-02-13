@@ -1,13 +1,8 @@
 extends templates/ui-kit_templ
 include elements/dropdown-input
+include elements/dropdown/dropdown
 include elements/subscription-input
+include elements/checkbox-buttons
 block content
-    +subscription-input()
-    -
-        var args = {
-            name: "guests",
-            label: "Гости",
-            placeholder: "Сколько гостей"
-        }
-        
-    +dropdown-input(args)
+    +checkbox-buttons({id: "smoking", name: "smoking", station: "Можно курить"}, {id: "pets", name: "pets", station: "Можно с питомцами"}, {id: "guests", name: "guests", station: "Можно пригласить гостей (до десяти человек)"})
+    +checkbox-buttons_rich("Доступность", {id: "hall", name: "hall", station: "Большой член", text: "Ширина коридоров в номере не менее 91 см."}, {id: "assistant", name: "assistant", station: "Большие яйца", text: "На 1 этаже вас встретит специалист  и проводит до номера."})
