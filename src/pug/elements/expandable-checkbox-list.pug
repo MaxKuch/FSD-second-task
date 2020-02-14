@@ -1,0 +1,9 @@
+include checkbox-button
+mixin expandable-checkbox-list(label, ...elements)
+    .expandable-checkbox-list
+        .expandable-checkbox-list__expand
+            h3.label= label
+            button.dark-shade-50.expandable-checkbox-list__btn
+                i.material-icons expand_more
+        .expandable-checkbox-list__list
+            +checkbox-button(...elements)

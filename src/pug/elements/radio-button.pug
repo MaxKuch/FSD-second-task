@@ -1,0 +1,6 @@
+mixin radio-button(...elements)
+    .radio-button
+        each item in elements
+            .radio-button__item
+                input(type="radio" name = "radio" id = item.id).radio-button__inp
+                label(for=item.id).parag= item.station
