@@ -5,8 +5,11 @@ include elements/subscription-input
 include elements/checkbox-button
 include elements/expandable-checkbox-list
 include elements/radio-button
+include elements/switch-button
 block content
     +checkbox-button({id: "smoking", station: "Можно курить", title: "Checkbox buttons"}, {id: "pets",  station: "Можно с питомцами"}, {id: "guests", station: "Можно пригласить гостей (до десяти человек)"})
     +checkbox-button_rich("Доступность", {id: "hall", name: "hall", station: "Широкий коридор", text: "Ширина коридоров в номере не менее 91 см."}, {id: "assistant", name: "assistant", station: "Помощник для инвалидов", text: "На 1 этаже вас встретит специалист  и проводит до номера."})
     +radio-button({id: "male", station: "Мужчина"}, {id: "female",  station: "Женщина"})
     +expandable-checkbox-list("Expandable checkbox list", {id: "smoking", station: "Можно курить"}, {id: "pets",  station: "Можно с питомцами"}, {id: "guests", station: "Можно пригласить гостей (до десяти человек)"})
+    +switch-button("Получать специальные предлжения", "offers")
+    include elements/like-button
