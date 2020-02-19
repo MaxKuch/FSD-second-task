@@ -1,0 +1,13 @@
+mixin button(text)
+    a.label.white.button.gradient-bg= text
+
+mixin button_border(text)
+    a.label.purple.button.button_border= text 
+        .button__inner.gradient-bg
+
+mixin button_transparent(text)
+    a.label.purple.button_transparent= text 
+
+mixin button_pay(text)
+    a.label.white.button.button_pay.gradient-bg= text
+        i.material-icons.button_pay-arrow.arrow-forward arrow_forward

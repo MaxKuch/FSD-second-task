@@ -163,7 +163,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_main_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sass/main.sass */ \"./sass/main.sass\");\n/* harmony import */ var _sass_main_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_main_sass__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @js/dropdown.js */ \"./js/dropdown.js\");\n/* harmony import */ var _js_input_masked_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @js/input_masked.js */ \"./js/input_masked.js\");\n/* harmony import */ var _js_expnd_checkbox_list_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @js/expnd-checkbox-list.js */ \"./js/expnd-checkbox-list.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_main_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sass/main.sass */ \"./sass/main.sass\");\n/* harmony import */ var _sass_main_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_main_sass__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @js/dropdown.js */ \"./js/dropdown.js\");\n/* harmony import */ var _js_input_masked_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @js/input_masked.js */ \"./js/input_masked.js\");\n/* harmony import */ var _js_expnd_checkbox_list_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @js/expnd-checkbox-list.js */ \"./js/expnd-checkbox-list.js\");\n/* harmony import */ var _js_like_button_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @js/like-button.js */ \"./js/like-button.js\");\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -200,6 +200,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_plugins_jquery_maskedinput_min_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @js/plugins/jquery.maskedinput.min.js */ \"./js/plugins/jquery.maskedinput.min.js\");\n/* harmony import */ var _js_plugins_jquery_maskedinput_min_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_plugins_jquery_maskedinput_min_js__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0__(\".input_masked\").mask(\"99.99.9999\", {placeholder: \"ДД.ММ.ГГГГ\"})\n\n//# sourceURL=webpack:///./js/input_masked.js?");
+
+/***/ }),
+
+/***/ "./js/like-button.js":
+/*!***************************!*\
+  !*** ./js/like-button.js ***!
+  \***************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\nlet isLiked = false\r\njquery__WEBPACK_IMPORTED_MODULE_0__('.like-button').click(function(){\r\n\r\n    let likesCount =  +jquery__WEBPACK_IMPORTED_MODULE_0__(this).find('.like-button__count').text()\r\n    \r\n    let iconState = isLiked ? 'favorite_border' : 'favorite'\r\n\r\n    if(isLiked){\r\n        likesCount--\r\n        isLiked = false\r\n    }\r\n    else{\r\n        likesCount++\r\n        isLiked = true\r\n    }\r\n\r\n    jquery__WEBPACK_IMPORTED_MODULE_0__(this).find('.like-button__count').html(likesCount)\r\n\r\n    jquery__WEBPACK_IMPORTED_MODULE_0__(this)\r\n    .toggleClass('dark-shade-25-bg')\r\n    .toggleClass('gradient-bg')\r\n    .find('.like-button__icon')\r\n    .toggleClass('dark-shade-25')\r\n    .toggleClass('purple')\r\n    .html(iconState)\r\n    .next()\r\n    .toggleClass('dark-shade-25')\r\n    .toggleClass('purple')\r\n})\n\n//# sourceURL=webpack:///./js/like-button.js?");
 
 /***/ }),
 

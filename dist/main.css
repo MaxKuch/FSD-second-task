@@ -94,17 +94,37 @@ input[type=radio] + * > label {
     line-height: 129%;
   }
 }
-.purple {
-  color: #BC9CFF;
-}
-
 .dark-shade-50 {
   color: #8F90A0;
 }
 
-.gradient-background {
+.dark-shade-75 {
+  color: #575871;
+}
+
+.dark-shade-100 {
+  color: #1F2041;
+}
+
+.gradient-bg {
   background: -webkit-gradient(linear, left bottom, left top, from(#BC9CFF), to(#8BA4F9));
   background: linear-gradient(to top, #BC9CFF, #8BA4F9);
+}
+
+.dark-shade-25-bg {
+  background: #C7C7CF;
+}
+
+.dark-shade-25 {
+  color: #C7C7CF;
+}
+
+.purple {
+  color: #BC9CFF;
+}
+
+.white {
+  color: #fff;
 }
 
 .section-title {
@@ -113,7 +133,6 @@ input[type=radio] + * > label {
   font-weight: bold;
   font-size: 24px;
   line-height: 125%;
-  color: #1F2041;
 }
 
 .widget-title {
@@ -122,7 +141,6 @@ input[type=radio] + * > label {
   font-weight: bold;
   font-size: 19px;
   line-height: 126%;
-  color: #1F2041;
 }
 
 .label {
@@ -133,7 +151,6 @@ input[type=radio] + * > label {
   font-size: 12px;
   line-height: 100%;
   text-transform: uppercase;
-  color: #1F2041;
 }
 .label_pdng {
   padding-bottom: 5.44px;
@@ -145,7 +162,6 @@ input[type=radio] + * > label {
   font-weight: normal;
   font-size: 14px;
   line-height: 171%;
-  color: #575871;
 }
 
 .switch-button {
@@ -240,13 +256,33 @@ input[type=radio] + * > label {
   font-weight: bold;
 }
 
+.rate-button {
+  display: -webkit-box;
+  display: flex;
+}
+.rate-button__star {
+  cursor: pointer;
+  margin-right: 4px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(to top, #BC9CFF, #8BA4F9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rate-button__star:last-child {
+  margin-right: 0;
+}
+
 .like-button {
   display: block;
+  cursor: pointer;
   height: 20px;
   width: 40px;
   border-radius: 10px;
-  background: #C7C7CF;
   padding: 1px;
+}
+.like-button:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(to top, #BC9CFF, #8BA4F9);
 }
 .like-button__wrap {
   height: 100%;
@@ -258,7 +294,6 @@ input[type=radio] + * > label {
   border-radius: 10px;
 }
 .like-button__icon {
-  color: #C7C7CF;
   font-size: 10px;
   line-height: 20px;
   margin-left: 4px;
@@ -270,7 +305,6 @@ input[type=radio] + * > label {
   font-size: 10px;
   line-height: 20px;
   margin-left: 7px;
-  color: #C7C7CF;
 }
 
 .expandable-checkbox-list {
@@ -329,6 +363,50 @@ input[type=radio] + * > label {
 }
 .radio-button__inp:checked + label {
   color: #575871;
+}
+
+.button {
+  cursor: pointer;
+  display: block;
+  width: 99px;
+  border-radius: 22px;
+  line-height: 44px;
+  text-align: center;
+}
+.button_border {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+}
+.button__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+}
+.button:active:not(.button_border), .button:active > .button__inner {
+  opacity: 0.5;
+}
+.button_transparent {
+  cursor: pointer;
+  line-height: 17px;
+}
+.button_transparent:active {
+  color: #C7C7CF;
+}
+.button_pay {
+  width: 320px;
+  position: relative;
+}
+.button_pay-arrow {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .dropdown {
