@@ -21,6 +21,7 @@ const cssLoaders = extra => {
     }
     return loaders
 }
+
 const optimization = () => {
     const config = {
         splitChunks: {
@@ -35,6 +36,7 @@ const optimization = () => {
     }
     return config
 }
+
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
@@ -44,8 +46,9 @@ module.exports = {
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
-            '@sass': path.resolve(__dirname, 'src/sass'),
+            '@styles': path.resolve(__dirname, 'src/styles'),
             '@js': path.resolve(__dirname, 'src/js'),
+            '@img': path.resolve(__dirname, 'src/assets/img'),
         }
     },
     optimization: optimization(),
@@ -85,7 +88,7 @@ module.exports = {
                 use: ['file-loader']
             },
             {
-                test: /\.(ttf|woff|eot|svg)$/,
+                test: /\.(ttf|woff|eot)$/,
                 use: ['file-loader']
             },
             {

@@ -1,3 +1,7 @@
-import '@sass/main.sass'
+import '@styles/main.sass'
 import '@js/dropdown.js'
 import '@js/input_masked.js'
+import '@js/expnd-checkbox-list.js'
+import '@js/like-button.js'
+import '@js/range-slider.js'
+import '@img/comment/comment-image1.png'

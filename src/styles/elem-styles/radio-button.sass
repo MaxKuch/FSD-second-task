@@ -1,0 +1,27 @@
+.radio-button
+    display: flex
+    flex-wrap: wrap
+    &__item
+        display: flex
+        margin-right: 20px
+        margin-bottom: 10px
+        &:last-child
+            margin-right: 0 
+    &__inp
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        &::after
+            content: ""
+            display: block
+            opacity: 0
+            width: 12px
+            height: 12px
+            background: $GradientPurple
+            border-radius: 50%
+            transition: .08s ease opacity 
+        &:checked::after
+            opacity: 100%
+        &:checked + label
+            color: $Dark-Shade-75

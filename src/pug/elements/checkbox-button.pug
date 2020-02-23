@@ -1,20 +1,20 @@
 mixin checkbox-button(...elements)
     .checkbox-buttons
         if elements[0].title
-            h3.label.checkbox-button__title= elements[0].title
+            h3.label.checkbox-button__title.dark-shade-100= elements[0].title
         ul
             each item in elements
                 li.checkbox-button__items
                     input(type="checkbox" name = "checkbox" id = item.id).checkbox-button__inp
-                    label(for=item.id).parag= item.station
+                    label(for=item.id).parag.dark-shade-50= item.station
 
 mixin checkbox-button_rich(title, ...elements)
     .checkbox-buttons.checkbox-button_rich
-        h3.label.checkbox-button__title= title
+        h3.label.checkbox-button__title.dark-shade-100= title
         ul
             each item in elements
                 li.checkbox-button__items.checkbox-button__items_rich
                     input(type="checkbox" name = "checkbox" id = item.id).checkbox-button__inp
                     div
-                        label(for=item.id).parag.checkbox-button__label_rich= item.station
-                        p.checkbox-button__description= item.text
+                        label(for=item.id).parag.checkbox-button__label_rich.dark-shade-75= item.station
+                        p.checkbox-button__description.dark-shade-50= item.text

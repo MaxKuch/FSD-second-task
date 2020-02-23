@@ -1,0 +1,36 @@
+.button
+    cursor: pointer
+    display: block
+    width: 99px
+    border-radius: 22px
+    line-height: 44px
+    text-align: center
+    &_border
+        position: relative
+        background-color: #fff
+        background-clip: padding-box
+        border: solid 2px transparent
+    &__inner
+        position: absolute
+        top: 0 
+        right: 0 
+        bottom: 0 
+        left: 0
+        z-index: -1
+        margin: -2px
+        border-radius: inherit
+    &:active:not(.button_border), &:active > &__inner
+        opacity: 0.5
+    &_transparent
+        cursor: pointer
+        line-height: 17px
+        &:active
+            color: $Dark-Shade-25
+    &_pay
+        width: 320px
+        position: relative
+    &_pay-arrow
+        position: absolute
+        right: 10px
+        top: 10px
+

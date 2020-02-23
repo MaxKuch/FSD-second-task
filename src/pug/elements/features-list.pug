@@ -1,0 +1,8 @@
+mixin features-list(...items)
+    ul.features-list
+        each item in items
+            li.features-list__item
+                i.material-icons.li.features-list__item-icon= item.icon
+                .features-list__item-text
+                    h3.features-list__item-title.parag.dark-shade-75= item.title
+                    p.features-list__item-description.parag.dark-shade-75= item.description
