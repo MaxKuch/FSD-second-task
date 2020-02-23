@@ -1,4 +1,5 @@
-a.like-button.dark-shade-25-bg
-    .like-button__wrap
-        i.material-icons.like-button__icon.dark-shade-25 favorite_border
-        .like-button__count.dark-shade-25 2
+mixin like-button(likesAmount)
+    a.like-button.dark-shade-25-bg(class!=attributes.class)
+        .like-button__wrap
+            i.material-icons.like-button__icon.dark-shade-25 favorite_border
+            .like-button__count.dark-shade-25= likesAmount

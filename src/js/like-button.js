@@ -19,7 +19,7 @@ $('.like-button').click(function(){
 
     $(this)
     .toggleClass('dark-shade-25-bg')
-    .toggleClass('gradient-bg')
+    .toggleClass('gradient-purple-bg')
     .find('.like-button__icon')
     .toggleClass('dark-shade-25')
     .toggleClass('purple')

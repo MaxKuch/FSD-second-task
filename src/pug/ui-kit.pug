@@ -9,16 +9,25 @@ include elements/rate-button
 include elements/switch-button
 include elements/button
 include elements/pagination
+include elements/range-slider
+include elements/bullet-list
+include elements/features-list
+include elements/comment
+include elements/like-button
 block content
     +checkbox-button({id: "smoking", station: "Можно курить", title: "Checkbox buttons"}, {id: "pets",  station: "Можно с питомцами"}, {id: "guests", station: "Можно пригласить гостей (до десяти человек)"})
     +checkbox-button_rich("Доступность", {id: "hall", name: "hall", station: "Широкий коридор", text: "Ширина коридоров в номере не менее 91 см."}, {id: "assistant", name: "assistant", station: "Помощник для инвалидов", text: "На 1 этаже вас встретит специалист  и проводит до номера."})
     +radio-button({id: "male", station: "Мужчина"}, {id: "female",  station: "Женщина"})
     +expandable-checkbox-list("Expandable checkbox list", {id: "smoking", station: "Можно курить"}, {id: "pets",  station: "Можно с питомцами"}, {id: "guests", station: "Можно пригласить гостей (до десяти человек)"})
     +switch-button("Получать специальные предлжения", "offers")
-    include elements/like-button
+    +like-button(2)
     +rate-button(4)
     +button('Войти')
     +button_border('Войти')
     +button_transparent('Войти')
     +button_pay('Перейти к оплате')
     +pagination()
+    +range-slider()
+    +bullet-list("Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00")
+    +features-list({icon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"}, {icon: "location_city", title: "Удобство", description: "Окно в каждой из спален"})
+    +comment("Мурад Сарафанов", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "comment-img1.png", 11)

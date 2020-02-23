@@ -1,0 +1,45 @@
+@import "./plugins/jquery-ui.css"
+
+.range-slider
+    max-width: 266px
+    &__head
+        display: flex
+        justify-content: space-between
+        margin-bottom: 23px
+        height: 15px
+    &__title
+        line-height: 15px
+    &__price-amount
+        font-family: Montserrat
+        font-size: 12px
+        line-height: 15px
+    &__description
+        font-family: Montserrat
+        font-size: 12px
+        line-height: 14px
+        margin-top: 14px
+
+$borderWidth: 1px
+
+.ui-slider
+    cursor: pointer
+    height: 6px
+    border: $borderWidth solid $Dark-Shade-25
+    border-radius: 3px
+
+.ui-slider-horizontal .ui-slider-range
+    background: $GradientGreen
+    height: 6px
+    top: -$borderWidth
+
+.ui-slider-horizontal.ui-slider .ui-slider-handle
+    top: -$borderWidth
+    transform: translateY(-32%)
+    cursor: pointer
+    width: 16px
+    height: 16px
+    background: $GradientGreen
+    border-radius: 50%
+    border: 2px solid #fff
+    &:focus
+        outline: none
