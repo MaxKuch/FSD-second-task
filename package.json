@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --mode development",
-    "build": "cross-env NODE_ENV=production webpack --mode production",
-    "watch": "cross-env NODE_ENV=development webpack --mode development --watch"
+    "dev": "cross-env NODE_ENV=development WATCH=\"false\" webpack --open --config webpack.dev.conf.js",
+    "build": "cross-env NODE_ENV=production WATCH=\"false\" webpack --config webpack.build.conf.js",
+    "watch": "cross-env NODE_ENV=development WATCH=\"true\" webpack --watch --open --config webpack.dev.conf.js",
+    "start": "cross-env NODE_ENV=development WATCH=\"true\" webpack-dev-server --open --config webpack.dev.conf.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
@@ -37,7 +39,9 @@
     "sass-loader": "^8.0.2",
     "terser-webpack-plugin": "^2.3.4",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "cross-env": "^7.0.0",
