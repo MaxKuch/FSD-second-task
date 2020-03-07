@@ -1,0 +1,16 @@
+mixin date-dropdown(id)
+    .date-dropdown(class!=attributes.class id = id)
+        .date-dropdown__dates-input
+            .date-dropdown__input-wrap
+                h3.label.date-dropdown__label.dark-shade-100 Прибытие
+                .input-with-btn
+                    input(type='text' name='date-dropdown' placeholder = 'ДД.ММ.ГГГГ').input.input-with-btn__inp.input-with-btn__inp_dark-shade-75.input-with-btn__inp_dark-shade-25-border.date-dropdown__input.date-dropdown__input--coming
+                    button.input-with-btn__btn.dark-shade-50.dropdown-input__btn_dark-shade-25-border.date-dropdown__btn
+                        i.material-icons expand_more
+            .date-dropdown__input-wrap
+                h3.label.date-dropdown__label.dark-shade-100 Выезд
+                .input-with-btn
+                    input(type='text' id='date-dropdown__leaving' name='date-dropdown' placeholder = 'ДД.ММ.ГГГГ').input.input-with-btn__inp.input-with-btn__inp_dark-shade-75.input-with-btn__inp_dark-shade-25-border.date-dropdown__input.date-dropdown__input--leaving
+                    button.input-with-btn__btn.dark-shade-50.dropdown-input__btn_dark-shade-25-border.date-dropdown__btn
+                        i.material-icons expand_more
+    

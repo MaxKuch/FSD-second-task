@@ -1,0 +1,55 @@
+.room-calc
+    &__info
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+        &-item
+            margin-top: auto
+    &__room-num
+        font-family: Quicksand
+        font-size: 24px
+        margin-right: 5px
+    &__room-suit
+        display: inline
+    &__room-cost
+        font-size: 13px
+    &__date-dropdown
+        z-index: 60
+        margin-bottom: 23px
+    &__dropdown-guests
+        z-index: 50
+        margin-bottom: 21px
+    &__calc-output
+        margin-bottom: 25px
+        &-result-item
+            line-height: 0.8
+        &-row
+            display: flex
+            margin-bottom: 11px
+            &:last-child
+                margin-bottom: 0
+            &-result
+                margin-top: 35px
+            &-dots
+                margin-left: 5px
+                margin-right: 5px
+                border-bottom: 1px dotted $Dark-Shade-25
+                flex-grow: 1
+        &-left-item
+            max-width: 214px
+            line-height: 142%
+        &-right-item
+            margin-left: auto
+        &-inf-icon
+            font-family: Montserrat, sans-serif
+            font-weight: bold
+            font-size: 12px
+            line-height: 20px
+            text-align: center
+            width: 20px
+            height: 20px
+            color: $Dark-Shade-25
+            border: 1px solid $Dark-Shade-25
+            border-radius: 50%
+            margin-left: 5px
+        

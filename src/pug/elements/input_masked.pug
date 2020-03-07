@@ -1,3 +1,5 @@
-mixin input_masked(name, label)
-    label.label.label_pdng(for="input_masked")= label
-    input.input.input_masked#input_masked(type='text' name=name placeholder = "ДД.ММ.ГГГГ" spellcheck="false")
+mixin input-masked(name, label)
+    .input-masked(class!=attributes.class)
+        label.label.label_pdng.dark-shade-100(for="input_masked")= label
+        input.input.input_masked#input_masked(type='text' name=name placeholder = "ДД.ММ.ГГГГ" spellcheck="false")
+        

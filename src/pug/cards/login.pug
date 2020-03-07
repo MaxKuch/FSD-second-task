@@ -1,0 +1,10 @@
+mixin login(title)
+    .login.card-wrapper(class != attributes.class)
+        .card-title.section-title.dark-shade-100= title
+        .login__login-fields
+            +textField("email", "Email")(class = "registration__text-field")
+            +textField("password", "Пароль")(class = "registration__text-field")
+        +button_wide("Войти")(class = "login__button-wide")
+        .login__reg
+            p.parag= "Нет аккаунт на Toxin?"
+            +button_border("Создать")

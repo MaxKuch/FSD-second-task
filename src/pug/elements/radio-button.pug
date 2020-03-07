@@ -1,6 +1,6 @@
 mixin radio-button(...elements)
-    .radio-button
+    .radio-button(class!=attributes.class)
         each item in elements
             .radio-button__item
-                input(type="radio" name = "radio" id = item.id).radio-button__inp
+                input(type="radio" name = "radio" id = item.id checked = item.checked).radio-button__inp
                 label(for=item.id).parag.dark-shade-50= item.station

@@ -8,6 +8,6 @@ mixin button_border(text)
 mixin button_transparent(text)
     a.label.purple.button_transparent= text 
 
-mixin button_pay(text)
-    a.label.white.button.button_pay.gradient-purple-bg= text
-        i.material-icons.button_pay-arrow.arrow-forward arrow_forward
+mixin button_wide(text)
+    a.label.white.button.button_wide.gradient-purple-bg(class!=attributes.class)= text
+        i.material-icons.button_wide-arrow.arrow-forward arrow_forward

@@ -1,0 +1,106 @@
+.date-dropdown .datepicker-inline
+    opacity: 0
+    transform: translateY(-6px)
+    transition: opacity .2s ease, transform .2s ease
+    &.active 
+        opacity: 1
+        transform: translateY(0)
+        transition: opacity .2s ease, transform .2s ease
+    &.hidden
+        visibility: hidden
+
+.datepicker
+    box-sizing: border-box
+    width: 100%
+    box-shadow: 0 10px 20px rgba($Dark-Shade-100, 0.05)
+    border: 1px solid rgba($Dark-Shade-25, 1)
+    opacity: 0
+
+    &--pointer
+        display: none
+    &--content
+        padding: 0
+    &--nav
+        padding: 20px 20px 30px 20px
+        border-bottom: none
+        &-action
+            width: 24px
+            &:hover
+                background: #fff
+        &-title
+            font-family: Quicksand, sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 19px
+            line-height: 126%
+            color: $Dark-Shade-100
+            &:hover
+                background: #fff
+    &--control
+        display: flex
+        justify-content: space-between
+        padding: 20px
+    &--cells
+        justify-content: center
+    &--cell
+        font-family: Montserrat, sans-serif
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        width: 40px
+        height: 40px
+        color: $Dark-Shade-50
+        &.-in-range-
+            background: $GradientPurpleOpacity25
+            color: $Dark-Shade-50
+        &-day.-focus-:not(.-selected-)
+            background: $GradientPurpleOpacity50
+            border-radius: 50%
+            color: #fff
+            &.-in-range-
+                border-radius: 0
+                opacity: 1
+                background: $GradientPurpleOpacity25
+                color: $Dark-Shade-75
+                font-weight: bold
+        &-day.-other-month-
+            color: $Dark-Shade-25
+        &-day.-current-
+            font-weight: bold
+            background: $GradientGreen
+            color: #fff
+            border-radius: 50%
+            &:hover
+                color: #fff
+        &-day.-selected-, &-day.-selected-.-current-,  &-day.-selected-.-current-
+            font-weight: bold
+            color: #fff
+            background: $GradientPurple
+            border-radius: 50%
+            &:hover
+                background: $GradientPurple
+            &.-other-month-
+                background: $GradientPurpleOpacity50
+                &.-focus-
+                    background: $GradientPurpleOpacity75
+        &.-range-from-::before, &.-range-from-.-focus-::before
+            @extend %range
+            border-radius: 50% 0 0 50%
+        &.-range-to-::before,  &.-range-to.-focus-::before
+            @extend %range
+            border-radius: 0 50% 50% 0
+        &.-range-from-, &.-range-to-
+            border: none
+    &--days-names
+        margin: 0
+        justify-content: center
+    &--day-name
+        flex: none
+        width: 40px
+        height: 40px
+        font-family: Montserrat, sans-serif
+        font-style: normal
+        font-weight: bold
+        font-size: 12px
+        color: $Purple
+        text-transform: capitalize

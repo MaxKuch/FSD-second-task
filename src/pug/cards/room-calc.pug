@@ -1,0 +1,36 @@
+mixin room-calc(roomNum, cost, isSuit)
+    .room-calc.card-wrapper(class != attributes.class id = `№${roomNum}`)
+        .room-calc__info
+            .room-calc__info-item
+                span.parag.dark-shade-100.bold.quicksand= "№ "
+                span.room-calc__room-num.dark-shade-100.bold= roomNum
+                if isSuit
+                    span.room-calc__room-suit.label.purple Люкс
+            .room-calc__info-item
+                span.parag.bold.dark-shade-50= `${cost}₽ `
+                span.room-calc__room-cost.dark-shade-50 в сутки
+        +date-dropdown(`date-dropdown${roomNum}`)(class = 'room-calc__date-dropdown')
+        -  
+            var argsGuests = {
+                label: "Гости",
+                name: "dropdown-guests",
+                placeholder: "Сколько гостей"
+            }
+        +dropdown_guests(argsGuests, {itemName:"Взрослые", itemData: "adult"}, {itemName:"Дети", itemData: "kids"} , {itemName:"Младенцы", itemData: "babyes"})(class = 'room-calc__dropdown-guests')
+        .room-calc__calc-output
+            .room-calc__calc-output-row
+                span.parag.dark-shade-75.room-calc__calc-output-left-item= `${cost}₽ х 4 суток`
+                span.parag.dark-shade-75.room-calc__calc-output-right-item 39 960₽
+            .room-calc__calc-output-row
+                span.parag.dark-shade-75.room-calc__calc-output-left-item Сбор за услуги: скидка 2 179₽
+                .room-calc__calc-output-inf-icon i
+                span.parag.dark-shade-75.room-calc__calc-output-right-item 0₽
+            .room-calc__calc-output-row
+                span.parag.dark-shade-75.room-calc__calc-output-left-item Сбор за дополнительные услуги
+                .room-calc__calc-output-inf-icon i
+                span.parag.dark-shade-75.room-calc__calc-output-right-item 300₽
+            .room-calc__calc-output-row.room-calc__calc-output-row-result
+                span.widget-title.dark-shade-100.room-calc__calc-output-result-item Итого
+                div.room-calc__calc-output-row-dots
+                span.widget-title.dark-shade-100.room-calc__calc-output-result-item 38 081₽
+        +button_wide("Забронировать")

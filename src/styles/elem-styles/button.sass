@@ -1,7 +1,8 @@
 .button
     cursor: pointer
     display: block
-    width: 99px
+    width: 100%
+    max-width: 99px
     border-radius: 22px
     line-height: 44px
     text-align: center
@@ -26,10 +27,11 @@
         line-height: 17px
         &:active
             color: $Dark-Shade-25
-    &_pay
-        width: 320px
+    &_wide
+        width: 100%
+        max-width: 320px
         position: relative
-    &_pay-arrow
+    &_wide-arrow
         position: absolute
         right: 10px
         top: 10px

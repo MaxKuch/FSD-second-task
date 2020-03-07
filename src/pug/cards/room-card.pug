@@ -1,0 +1,30 @@
+mixin room-card(img, roomNumber, cost, rating, testimonialsNum, isSuit)
+        .room-card(class != attributes.class)
+            .room-card__gallery
+                img(src = `assets/img/room-card/${img}`).room-card__gallery-photo
+                .room-card__gallery-arrows
+                    .room-card__gallery-arrow-left
+                        i.material-icons.room-card__gallery-arrow-left-icon expand_more
+                    .room-card__gallery-arrow-right
+                        i.material-icons.room-card__gallery-arrow-right-icon expand_more
+                .room-card__gallery-bullets
+                    .room-card__gallery-bullet.active
+                    .room-card__gallery-bullet
+                    .room-card__gallery-bullet
+                    .room-card__gallery-bullet
+            .room-card__content
+                .room-card__row
+                    .room-card__row-item
+                        span.parag.dark-shade-100.bold.quicksand= "№ "
+                        span.room-card__room-num.dark-shade-100.bold= roomNumber
+                        if isSuit
+                            span.room-card__room-suit.label.purple Люкс
+                    .room-card__row-item
+                        span.parag.bold.dark-shade-50= `${cost}₽ `
+                        span.room-card__room-cost.dark-shade-50 в сутки
+                .room-card__row
+                    .room-card__row-item
+                        +rate-button(rating)
+                    .room-card__row-item
+                        span.parag.bold.dark-shade-50= `${testimonialsNum} `
+                        span.parag.dark-shade-50 Отзывов

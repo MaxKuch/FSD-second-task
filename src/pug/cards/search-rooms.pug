@@ -1,0 +1,12 @@
+mixin search-rooms(title)
+    .search-rooms.card-wrapper(class != attributes.class)
+        h2.search-rooms__title.card-title.section-title.dark-shade-100= title
+        +date-dropdown("date-dropdown")(class = "search-rooms__date-dropdown")
+        -  
+            var argsGuests = {
+                label: "Гости",
+                name: "dropdown-guests",
+                placeholder: "Сколько гостей"
+            }
+        +dropdown_guests(argsGuests, {itemName:"Взрослые", itemData: "adult"}, {itemName:"Дети", itemData: "kids"} , {itemName:"Младенцы", itemData: "babyes"})(class = "search-rooms__dropdown-guests")
+        +button_wide("Перейти к оплате")

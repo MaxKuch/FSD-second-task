@@ -14,20 +14,26 @@ include elements/bullet-list
 include elements/features-list
 include elements/comment
 include elements/like-button
+include elements/date-dropdown
+include elements/text-field
+include elements/input_masked
+include cards/search-rooms
+include cards/registration
+include cards/login
+include cards/room-card
+include cards/room-calc
 block content
-    +checkbox-button({id: "smoking", station: "Можно курить", title: "Checkbox buttons"}, {id: "pets",  station: "Можно с питомцами"}, {id: "guests", station: "Можно пригласить гостей (до десяти человек)"})
-    +checkbox-button_rich("Доступность", {id: "hall", name: "hall", station: "Широкий коридор", text: "Ширина коридоров в номере не менее 91 см."}, {id: "assistant", name: "assistant", station: "Помощник для инвалидов", text: "На 1 этаже вас встретит специалист  и проводит до номера."})
-    +radio-button({id: "male", station: "Мужчина"}, {id: "female",  station: "Женщина"})
-    +expandable-checkbox-list("Expandable checkbox list", {id: "smoking", station: "Можно курить"}, {id: "pets",  station: "Можно с питомцами"}, {id: "guests", station: "Можно пригласить гостей (до десяти человек)"})
-    +switch-button("Получать специальные предлжения", "offers")
-    +like-button(2)
-    +rate-button(4)
-    +button('Войти')
-    +button_border('Войти')
-    +button_transparent('Войти')
-    +button_pay('Перейти к оплате')
-    +pagination()
-    +range-slider()
-    +bullet-list("Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00")
-    +features-list({icon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"}, {icon: "location_city", title: "Удобство", description: "Окно в каждой из спален"})
-    +comment("Мурад Сарафанов", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "comment-image1.png", 11)
+    .ui-kit
+        img(src = "assets/img/ui-kit/logo-greyscale.svg").ui-kit__logo
+       
+        .ui-kit-cards
+            .ui-kit-cards__column
+                +search-rooms("Найдём номера под ваши пожелания")(class = "ui-kit-cards__item")
+                +registration("Регистрация аккаунта")(class = "ui-kit-cards__item")
+            .ui-kit-cards__column
+                +room-calc("888", "9 990", true)(class = "ui-kit-cards__item")
+                +login("Войти")(class = "ui-kit-cards__item")
+            .ui-kit-cards__column
+                #ui-kit-cards__date-dropdown.ui-kit-cards__date-dropdown.ui-kit-cards__item
+                +room-card("room-card-img888.jpg","888", "9 990", 5, "145", true)(class = "ui-kit-cards__item")
+                +room-card("room-card-img840.jpg","840", "9 900", 5, "145", false)(class = "ui-kit-cards__item")
