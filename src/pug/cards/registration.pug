@@ -9,7 +9,7 @@ mixin registration(title)
             h3.label.dark-shade-100.registration__reg-fields-label= "Данные для входа в сервис"
             +textField("email", "Email")(class = "registration__text-field")
             +textField("password", "Пароль")(class = "registration__text-field")
-            +switch-button("Получать специальные предлжения", "offers")
+            +switch-button("Получать спецпредлжения", "offers")
         +button_wide("Перейти к оплате")(class = "registration__button-wide")
         .registration__login
             p.parag= "Уже есть аккаунт на Toxin"

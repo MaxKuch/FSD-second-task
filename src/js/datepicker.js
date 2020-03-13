@@ -9,7 +9,7 @@ export default class Datepicker{
         this.instance = this.parent.datepicker(preferences).data('datepicker')
         this.datepicker = this.parent.find('.datepicker-inline')
         this.datepicker.addClass('hidden')
-        $(".datepicker--content").after('<div class = "datepicker--control"><button class = "datepicker--clear label dark-shade-50">Очистить</button><button class = "datepicker--accept label purple">Применить</button></div>')
+        this.parent.find(".datepicker--content").after('<div class = "datepicker--control"><button class = "datepicker--clear label dark-shade-50">Очистить</button><button class = "datepicker--accept label purple">Применить</button></div>')
     }
     show(){
         this.datepicker.removeClass('hidden')

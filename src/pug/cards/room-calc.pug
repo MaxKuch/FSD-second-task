@@ -16,7 +16,7 @@ mixin room-calc(roomNum, cost, isSuit)
                 name: "dropdown-guests",
                 placeholder: "Сколько гостей"
             }
-        +dropdown_guests(argsGuests, {itemName:"Взрослые", itemData: "adult"}, {itemName:"Дети", itemData: "kids"} , {itemName:"Младенцы", itemData: "babyes"})(class = 'room-calc__dropdown-guests')
+        +dropdown_guests(argsGuests, {itemName:"Взрослые", itemData: "adult", id: "roomCalcAdults"}, {itemName:"Дети", itemData: "kids", id: "roomCalcKids"} , {itemName:"Младенцы", itemData: "babyes", id: "roomCalcBabies"})(class = 'room-calc__dropdown-guests')
         .room-calc__calc-output
             .room-calc__calc-output-row
                 span.parag.dark-shade-75.room-calc__calc-output-left-item= `${cost}₽ х 4 суток`

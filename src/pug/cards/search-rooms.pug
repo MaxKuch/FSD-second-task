@@ -8,5 +8,5 @@ mixin search-rooms(title)
                 name: "dropdown-guests",
                 placeholder: "Сколько гостей"
             }
-        +dropdown_guests(argsGuests, {itemName:"Взрослые", itemData: "adult"}, {itemName:"Дети", itemData: "kids"} , {itemName:"Младенцы", itemData: "babyes"})(class = "search-rooms__dropdown-guests")
+        +dropdown_guests(argsGuests, {itemName:"Взрослые", itemData: "adult", id: "findRoomAdults"}, {itemName:"Дети", itemData: "kids", id: "findRoomKids"} , {itemName:"Младенцы", itemData: "babyes", id: "findRoomBabies"})(class = "search-rooms__dropdown-guests")
         +button_wide("Перейти к оплате")

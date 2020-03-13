@@ -36,9 +36,14 @@
         border-radius: 50%
     &__dec
         opacity: 0.38
+        &.active
+            opacity: 1
     &__btns
         display: flex
         justify-content: space-between
         margin-top: 20px
+
         &-clear
             visibility: hidden
+            &.active
+                visibility: visible

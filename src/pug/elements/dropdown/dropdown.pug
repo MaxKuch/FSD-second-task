@@ -8,20 +8,20 @@ mixin dropdown_comfort(args, ...items)
                 each item in items
                     li(data-item = item.itemData)= item.itemName 
                         .dropdown__counter
-                            button.dropdown__dec= "-"
+                            button.dropdown__dec(id = `${item.id}Dec`)= "-"
                             span.dropdown__count= 0
-                            button.dropdown__inc= "+"
+                            button.dropdown__inc(id = `${item.id}Inc`)= "+"
 mixin dropdown_guests(args, ...items)
-    .dropdown.dropdown_guests(class!=attributes.class data-name = args.name)
+    #dropdown_guests.dropdown.dropdown_guests(class!=attributes.class data-name = args.name)
         +dropdown-input(args)
         .dropdown__menu.label.dark-shade-100
             ul.dropdown__list
                 each item in items
                     li(data-item = item.itemData)= item.itemName 
                         .dropdown__counter
-                            button.dropdown__dec= "-"
+                            button.dropdown__dec(id = `${item.id}Dec`)= "-"
                             span.dropdown__count= 0
-                            button.dropdown__inc= "+"
+                            button.dropdown__inc(id = `${item.id}Inc`)= "+"
             .dropdown__btns
                 button.dropdown__btns-clear.label.dark-shade-50 Очистить
                 button.dropdown__btns-accept.label.purple Применить

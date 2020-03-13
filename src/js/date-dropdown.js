@@ -2,7 +2,6 @@ import * as $ from "jquery"
 import Datepicker from "./datepicker.js"
 import "air-datepicker/dist/js/datepicker.min"
 
-
 let myDatepicker = new Datepicker('#date-dropdown', {
     nextHtml: '<i class = "material-icons purple">arrow_forward</i>',
     prevHtml: '<i class = "material-icons purple">arrow_back</i>',
@@ -13,6 +12,7 @@ let myDatepicker = new Datepicker('#date-dropdown', {
     offset: 5,
     minDate: new Date(),
 })
+
 myDatepicker.parent.datepicker({
     onSelect: () => {myDatepicker.parseDate()},
     onShow: () => {
@@ -113,6 +113,7 @@ myDatepicker3.inputComing.click(() => {
     myDatepicker3.toggle()
 })
 $('.datepicker--clear').click(() => {
+    console.log("1")
     myDatepicker3.clear()
 })
 
