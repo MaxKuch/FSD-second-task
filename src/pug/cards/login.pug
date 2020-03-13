@@ -1,6 +1,6 @@
 mixin login(title)
     .login.card-wrapper(class != attributes.class)
-        form(action="#", method="post")
+        form(action="")
             .card-title.section-title.dark-shade-100= title
             .login__login-fields
                 +textField("email", "Email")(class = "login__text-field")

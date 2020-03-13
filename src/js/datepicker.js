@@ -2,15 +2,17 @@ import * as $ from "jquery"
 export default class Datepicker{
     constructor(id, preferences){
         this.isOpened = false
+        this.isSelected = false
         this.parent = $(id)
         this.inputComing = this.parent.find('input.date-dropdown__input--coming')
         this.inputLeaving = this.parent.find('input.date-dropdown__input--leaving')
-        this.toggleBtn = this.parent.find('button')
+        this.toggleBtn = this.parent.find('.input-with-btn__btn')
         this.instance = this.parent.datepicker(preferences).data('datepicker')
         this.datepicker = this.parent.find('.datepicker-inline')
         this.datepicker.addClass('hidden')
-        this.parent.find(".datepicker--content").after('<div class = "datepicker--control"><button class = "datepicker--clear label dark-shade-50">Очистить</button><button class = "datepicker--accept label purple">Применить</button></div>')
+        this.parent.find(".datepicker--content").after('<div class = "datepicker--control"><div class = "datepicker--clear label dark-shade-50">Очистить</div><div class = "datepicker--accept label purple">Применить</div></div>')
         this.acceptBtn = this.parent.find('.datepicker--accept')
+        this.clearBtn = this.parent.find('.datepicker--clear')
     }
     show(){
         this.datepicker.removeClass('hidden')
@@ -30,6 +32,7 @@ export default class Datepicker{
     }
     clear(){
         this.instance.clear()
+        this.isSelected = false
         this.inputLeaving.val('')
         this.inputComing.val('')
     }

@@ -8,9 +8,9 @@ mixin dropdown_comfort(args, ...items)
                 each item in items
                     li(data-item = item.itemData)= item.itemName 
                         .dropdown__counter
-                            button.dropdown__dec(id = `${item.id}Dec`)= "-"
+                            .dropdown__dec(id = `${item.id}Dec`)= "-"
                             span.dropdown__count= 0
-                            button.dropdown__inc(id = `${item.id}Inc`)= "+"
+                            .dropdown__inc(id = `${item.id}Inc`)= "+"
 mixin dropdown_guests(args, ...items)
     #dropdown_guests.dropdown.dropdown_guests(class!=attributes.class data-name = args.name)
         +dropdown-input(args)
@@ -19,10 +19,10 @@ mixin dropdown_guests(args, ...items)
                 each item in items
                     li(data-item = item.itemData)= item.itemName 
                         .dropdown__counter
-                            button.dropdown__dec(id = `${item.id}Dec`)= "-"
+                            .dropdown__dec(id = `${item.id}Dec`)= "-"
                             span.dropdown__count= 0
-                            button.dropdown__inc(id = `${item.id}Inc`)= "+"
+                            .dropdown__inc(id = `${item.id}Inc`)= "+"
             .dropdown__btns
-                button.dropdown__btns-clear.label.dark-shade-50 Очистить
-                button.dropdown__btns-accept.label.purple Применить
+                .dropdown__btns-clear.label.dark-shade-50 Очистить
+                .dropdown__btns-accept.label.purple Применить
         

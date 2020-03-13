@@ -27,10 +27,12 @@
                 color: $Dark-Shade-75
     &__inp:focus + &__btn
         border-color: $Dark-Shade-50
-    &__btn   
+    &__btn
+        cursor: pointer   
         display: flex
         align-items: center
         justify-content: center
+        flex-shrink: 0
         width: 44px
         height: 44px
         border: 1px solid $Dark-Shade-25
@@ -41,6 +43,3 @@
             border-color: $Dark-Shade-50 !important
         &_dark-shade-25-border
             border-color: $Dark-Shade-25
-        i
-            width: 44px
-

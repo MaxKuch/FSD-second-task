@@ -1,16 +1,17 @@
 mixin registration(title)
     .registration.card-wrapper(class != attributes.class)
-        h2.card-title.title.section-title.dark-shade-100= title
-        +textField("name", "Имя")(class = "registration__text-field")
-        +textField("surname", "Фамилия")(class = "registration__text-field")
-        +radio-button({id: "male", station: "Мужчина", checked: true}, {id: "female",  station: "Женщина", checked: false})(class = "registration__radio-button")
-        +input-masked("birthday", "Дата рождения")(class = "registration__input-masked")
-        .registration__reg-fields
-            h3.label.dark-shade-100.registration__reg-fields-label= "Данные для входа в сервис"
-            +textField("email", "Email")(class = "registration__text-field")
-            +textField("password", "Пароль")(class = "registration__text-field")
-            +switch-button("Получать спецпредлжения", "offers")
-        +button_wide("Перейти к оплате")(class = "registration__button-wide")
-        .registration__login
-            p.parag= "Уже есть аккаунт на Toxin"
-            +button_border("Войти")
+        form(action="")
+            h2.card-title.title.section-title.dark-shade-100= title
+            +textField("name", "Имя")(class = "registration__text-field")
+            +textField("surname", "Фамилия")(class = "registration__text-field")
+            +radio-button({id: "male", station: "Мужчина", checked: true}, {id: "female",  station: "Женщина", checked: false})(class = "registration__radio-button")
+            +input-masked("birthday", "Дата рождения")(class = "registration__input-masked")
+            .registration__reg-fields
+                h3.label.dark-shade-100.registration__reg-fields-label= "Данные для входа в сервис"
+                +textField("email", "Email")(class = "registration__text-field")
+                +textField("password", "Пароль")(class = "registration__text-field")
+                +switch-button("Получать спецпредлжения", "offers")
+            +button_wide("Перейти к оплате")(class = "registration__button-wide")
+            .registration__login
+                p.parag= "Уже есть аккаунт на Toxin"
+                +button_border("Войти")

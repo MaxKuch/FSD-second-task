@@ -27,6 +27,11 @@ export default class RoomCalc{
         this.displayValue(this._summaryElem, this._summary)
     }
 
+    clear(){
+        this.daysAmount = 0
+        this.refreshValues()
+    }
+
     calcCostForDays(){
         this._costForDays = this._roomCost * this.daysAmount
     }

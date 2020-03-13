@@ -14,9 +14,11 @@ let myDatepicker = new Datepicker('#date-dropdown', {
 })
 
 myDatepicker.parent.datepicker({
-    onSelect: () => {myDatepicker.parseDate()},
+    onSelect: () => {
+        myDatepicker.parseDate()
+        myDatepicker.isSelected = true
+    },
     onShow: () => {
-        console.log('1')
         myDatepicker.datepicker.toggleClass('hidden')
     },
     onHide: (dp, animationCompleted) => {
@@ -34,7 +36,7 @@ myDatepicker.inputLeaving.click(() => {
 myDatepicker.inputComing.click(() => {
     myDatepicker.toggle()
 })
-$('.datepicker--clear').click(() => {
+myDatepicker.clearBtn.click(() => {
     myDatepicker.clear()
 })
 
@@ -48,14 +50,17 @@ let myDatepicker2 = new Datepicker('#date-dropdown888', {
     navTitles: {
         days: 'MM yyyy'
     },
+    toggleSelected: false,
     range: true,
     offset: 5,
     minDate: new Date(),
 })
 myDatepicker2.parent.datepicker({
-    onSelect: () => {myDatepicker2.parseDate()},
+    onSelect: () => {
+            myDatepicker2.parseDate()
+            myDatepicker2.isSelected = true
+    },
     onShow: () => {
-        console.log('1')
         myDatepicker2.datepicker.toggleClass('hidden')
     },
     onHide: (dp, animationCompleted) => {
@@ -73,7 +78,8 @@ myDatepicker2.inputLeaving.click(() => {
 myDatepicker2.inputComing.click(() => {
     myDatepicker2.toggle()
 })
-$('.datepicker--clear').click(() => {
+
+myDatepicker2.clearBtn.click(() => {
     myDatepicker2.clear()
 })
 
@@ -92,9 +98,11 @@ let myDatepicker3 = new Datepicker('#ui-kit-cards__date-dropdown', {
     minDate: new Date(),
 })
 myDatepicker3.parent.datepicker({
-    onSelect: () => {myDatepicker3.parseDate()},
+    onSelect: () => {
+            myDatepicker3.parseDate()
+            myDatepicker3.isSelected = true
+    },
     onShow: () => {
-        console.log('1')
         myDatepicker3.datepicker.toggleClass('hidden')
     },
     onHide: (dp, animationCompleted) => {
@@ -112,8 +120,7 @@ myDatepicker3.inputLeaving.click(() => {
 myDatepicker3.inputComing.click(() => {
     myDatepicker3.toggle()
 })
-$('.datepicker--clear').click(() => {
-    console.log("1")
+myDatepicker3.clearBtn.click(() => {
     myDatepicker3.clear()
 })
 

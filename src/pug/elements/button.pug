@@ -1,13 +1,13 @@
 mixin button(text)
-    a.label.white.button.gradient-purple-bg= text
+    button.label.white.button.gradient-purple-bg= text
 
 mixin button_border(text)
-    a.label.purple.button.button_border= text 
+    button.label.purple.button.button_border= text 
         .button__inner.gradient-purple-bg
 
 mixin button_transparent(text)
-    a.label.purple.button_transparent= text 
+    button.label.purple.button_transparent= text 
 
 mixin button_wide(text)
-    a.label.white.button.button_wide.gradient-purple-bg(class!=attributes.class)= text
+    button.label.white.button.button_wide.gradient-purple-bg(class!=attributes.class)= text
         i.material-icons.button_wide-arrow.arrow-forward arrow_forward
