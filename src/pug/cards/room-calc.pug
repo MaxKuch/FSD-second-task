@@ -17,20 +17,23 @@ mixin room-calc(roomNum, cost, isSuit)
                 placeholder: "Сколько гостей"
             }
         +dropdown_guests(argsGuests, {itemName:"Взрослые", itemData: "adult", id: "roomCalcAdults"}, {itemName:"Дети", itemData: "kids", id: "roomCalcKids"} , {itemName:"Младенцы", itemData: "babyes", id: "roomCalcBabies"})(class = 'room-calc__dropdown-guests')
-        .room-calc__calc-output
+        .room-calc__calc-output(id = `${roomNum}-room-calc`)
             .room-calc__calc-output-row
-                span.parag.dark-shade-75.room-calc__calc-output-left-item= `${cost}₽ х 4 суток`
-                span.parag.dark-shade-75.room-calc__calc-output-right-item 39 960₽
+                div.parag.dark-shade-75.room-calc__calc-output-left-item= `${cost}₽ х ` 
+                    span(id = `${roomNum}-room-calc_days`)
+                    =' суток'
+                span.parag.dark-shade-75.room-calc__calc-output-right-item(id = `${roomNum}-room-calc_cost-for-days`)
             .room-calc__calc-output-row
-                span.parag.dark-shade-75.room-calc__calc-output-left-item Сбор за услуги: скидка 2 179₽
+                div.parag.dark-shade-75.room-calc__calc-output-left-item Сбор за услуги: скидка 
+                    span(id = `${roomNum}-room-calc_discount`)
                 .room-calc__calc-output-inf-icon i
                 span.parag.dark-shade-75.room-calc__calc-output-right-item 0₽
             .room-calc__calc-output-row
                 span.parag.dark-shade-75.room-calc__calc-output-left-item Сбор за дополнительные услуги
                 .room-calc__calc-output-inf-icon i
-                span.parag.dark-shade-75.room-calc__calc-output-right-item 300₽
+                span.parag.dark-shade-75.room-calc__calc-output-right-item(id = `${roomNum}-room-calc_collect-extra-services`)
             .room-calc__calc-output-row.room-calc__calc-output-row-result
                 span.widget-title.dark-shade-100.room-calc__calc-output-result-item Итого
                 div.room-calc__calc-output-row-dots
-                span.widget-title.dark-shade-100.room-calc__calc-output-result-item 38 081₽
+                span.widget-title.dark-shade-100.room-calc__calc-output-result-item(id = `${roomNum}-room-calc_summary`)
         +button_wide("Забронировать")

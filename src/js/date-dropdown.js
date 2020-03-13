@@ -38,7 +38,7 @@ $('.datepicker--clear').click(() => {
     myDatepicker.clear()
 })
 
-$('.datepicker--accept').click(() => {
+myDatepicker.acceptBtn.click(() => {
     myDatepicker.toggle()
 })
 
@@ -77,7 +77,7 @@ $('.datepicker--clear').click(() => {
     myDatepicker2.clear()
 })
 
-$('.datepicker--accept').click(() => {
+myDatepicker2.acceptBtn.click(() => {
     myDatepicker2.toggle()
 })
 
@@ -117,6 +117,8 @@ $('.datepicker--clear').click(() => {
     myDatepicker3.clear()
 })
 
-$('.datepicker--accept').click(() => {
+myDatepicker3.acceptBtn.click(() => {
     myDatepicker3.toggle()
 })
+
+export default myDatepicker2

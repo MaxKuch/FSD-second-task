@@ -12,7 +12,7 @@ const findRoomGuestsDropdown = new Dropdown('.search-rooms__dropdown-guests', "�
     findRoomKids: {
         id: "findRoomKids",
         singular: 'ребенок',
-        plural: 'детей',
+        plural: 'ребенка',
         value: 0
     },
     findRoomBabies: {
@@ -70,7 +70,7 @@ const roomCalcGuestsDropdown = new Dropdown('.room-calc__dropdown-guests', "Ск
     roomCalcKids: {
         id: "roomCalcKids",
         singular: 'ребенок',
-        plural: 'детей',
+        plural: 'ребенка',
         value: 0
     },
     roomCalcBabies: {
@@ -117,3 +117,4 @@ roomCalcGuestsDropdown.acceptBtn.on("click", function(){
 roomCalcGuestsDropdown.clearBtn.on("click", function(){
     roomCalcGuestsDropdown.resetToZero()
 })
+
